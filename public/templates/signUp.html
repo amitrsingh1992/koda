@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sign Up Page</title>
+    <link rel="stylesheet" href="../css/signup.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="signup">
+        <h2>Create your Koda Account</h2>
+        <div class="signPage">
+          <form id="formName">
+            <p>
+              <span>Name</span><br>
+              <span>
+                <input type="text" placeholder="First Name"/>
+                <input type="text" placeholder="Last Name"/>
+              </span><br>
+            </p>
+            <p>
+              <span>Choose your username</span><br>
+              <span><input type="text" id="username"/></span><br>
+              <span>
+            </p>
+            <p>
+              <span>Create a password for the parent</span>
+              <span style="margin-left:50px;">Retype parent's password</span>
+            </span><br>
+            <span>
+              <span><input type="password" id="Parentpass"/></span>
+              <span style="margin-left:40px;"><input type="password" id="Ppass"/></span>
+            </span><br>
+            </p>
+            <p>
+              <span>
+                <span>Create a password for the user</span>
+                <span style="margin-left:60px;">Retype user's password</span>
+              </span><br>
+              <span>
+                <span><input type="password" id="Upass"/></span>
+                <span style="margin-left:40px;"><input type="password" id="Userpass"/></span>
+              </span><br>
+            </p>
+            <p>
+              <span>
+                Birthday
+              </span><br>
+              <span>
+                <input type="date" style="text-align:center;font-size:16px;" placeholder="dd/mm/yyyy"/>
+              </span><br>
+            </p>
+            <p>
+              <span>
+                Gender
+              </span><br>
+              <span>
+                <select name="gender" required>
+                  <option value=""> Select </option>
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
+                  <option value="Transgender">Transgender</option>
+                </select>
+              </span><br>
+            </p>
+            <p>
+              <span>
+                parent's email address
+              </span><br>
+              <span>
+                <input type="text" id="Pemail" />
+              </span><br>
+            </p>
+            <p>
+              <span>
+                user's email address(optional)
+              </span><br>
+              <span>
+                <input type="text" id="Uemail"/>
+              </span><br>
+            </p>
+            <p>
+              <span>
+                Location
+              </span><br>
+              <span>
+                <input type="text" placeholder="City and State" id="location" />
+                <input type="text" style="margin-left:5px;" placeholder="Country" />
+              </span><br>
+            </p>
+            <span>
+              <input type="button" id="subButton" value="Purchase Your Account">
+            </span>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

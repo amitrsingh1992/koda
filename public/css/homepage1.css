@@ -1,0 +1,83 @@
+body{
+  background: url('../images/junglePage.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+.top-left-content{
+  width:120px;
+  height:120px;
+  background-color:#cccccc;
+  border:1px solid #cccccc;
+  border-radius: 5px;
+}
+.bottom-left-content{
+  width:100%;
+  height:700px;
+  background-color:#cccccc;
+  border:1px solid #cccccc;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+.row{
+  margin-top:10px;
+}
+
+.mid-content{
+  width:100%;
+  height:810px;;
+}
+.top-right-content{
+  width:100%;
+  height:120px;
+  background-color:#cccccc;
+  border:1px solid #cccccc;
+  border-radius: 5px;
+}
+.bottom-right-content{
+  width:100%;
+  height:700px;
+  background-color:#cccccc;
+  border:1px solid #cccccc;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+#topbar1,#topbar2,#topbar3{
+  height:75px;
+  width:75px;
+  border-radius: 5px;
+  margin-left: 40px;
+  margin-right:20px;
+}
+.progress{
+  margin-top: 2px;
+}
+.progress-bar{
+  border: 1px solid white;
+  background-color: lightgreen;
+}
+#actionButton1{
+  background-color: black;
+  text-align:center;
+  height:60px;
+  width:120px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 2px grey;
+  color: white;
+  border-color: black;
+  margin-right: 20px;
+  margin-left: 30%;
+  font-size: 18px;
+  margin-bottom: 10px;
+  justify-content: center;
+}
+#actionButton2{
+  margin-left: 25px;
+}
+.navbar{
+  float:center;
+  margin-top: 20px;
+  margin-left:30%;
+}
+#chat{
+float:right;
+margin-right: 20px;
+}

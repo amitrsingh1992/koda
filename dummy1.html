@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>3rd layout</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="public/css/lionDance2.css">
+    <style media="screen">
+      #rightpoint{
+        width:320px;;
+        height:auto;
+        /*background-color: grey;*/
+        float:left;
+        margin-top: 5%;
+      }
+      .gifSample{
+        /*display: inline-block;*/
+        width:100%;
+        height:auto;
+        /*background-color: green;*/
+      }
+    </style>
+    <script type="text/javascript">
+        $(document).ready(function () {
+          setTimeout(function () {
+            $("#pointing").fadeIn(500);
+          },4000);
+          setTimeout(function () {
+            $("#leftPoint").fadeIn(500);
+          },8000);
+        });
+
+        function allowDrop(ev) {
+            ev.preventDefault();
+        }
+
+        function drag(ev) {
+            ev.dataTransfer.setData("text", ev.target.id);
+        }
+
+        function drop(ev) {
+            ev.preventDefault();
+            var data = ev.dataTransfer.getData("text");
+            ev.target.appendChild(document.getElementById(data));
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="left-content">
+                    <div class="top-left-content">
+
+                    </div>
+                    <div class="bottom-left-content">
+                        <div class="dragSection">
+                            <div class="col-lg-6">
+                                <div class="imgback">
+                                    <img src="public/images/dance1.png" id="dance1" alt="Dance Step 1 image" draggable="true" ondragstart="drag(event)" />
+                                </div>
+                                <div class="imgback">
+                                    <img src="public/images/dance2.png" id="dance2" alt="Dance Step 2 image" draggable="true" ondragstart="drag(event)" />
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="imgback">
+                                    <img src="public/images/dance3.png" id="dance3" alt="Dance Step 3 image" draggable="true" ondragstart="drag(event)" />
+                                </div>
+                                <div class="imgback">
+                                    <img src="public/images/dance4.png" id="dance4" alt="Dance Step 4 image" draggable="true" ondragstart="drag(event)" />
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="imgback">
+                                    <img src="public/images/dance5.png" id="dance5" alt="Dance Step 5 image" draggable="true" ondragstart="drag(event)" />
+                                </div>
+                                <div class="imgback">
+                                    <img src="public/images/dance6.png" id="dance6" alt="Dance Step 6 image" draggable="true" ondragstart="drag(event)" />
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="imgback">
+                                    <img src="public/images/dance7.png" id="dance7" alt="Dance Step 7 image" draggable="true" ondragstart="drag(event)" />
+                                </div>
+                                <div class="imgback">
+                                    <img src="public/images/dance8.png" id="dance8" alt="Dance Step 8 image" draggable="true" ondragstart="drag(event)" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="top-mid-content">
+
+                </div>
+                <div class="bottom-mid-content">
+
+                    <div class="gifSample">
+                        <div id="rightpoint">
+                          <img src="public/images/midsign.png" style="display:none" id="pointing" alt="Rightside Pointing image" />
+                        </div>
+                        <img src="public/images/sampleDance.gif" id="sample" alt="Dance Preview" />
+                    </div>
+                    <div class="dropSection">
+                        <div class="col-lg-3">
+                            <div class="subcards">
+                                <div class="headers">
+                                    Step1
+                                </div>
+                                <div class="drop" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="subcards">
+                                <div class="headers">
+                                    Step2
+                                </div>
+                                <div class="drop" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="subcards">
+                                <div class="headers">
+                                    Step3
+                                </div>
+                                <div class="drop" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="subcards">
+                                <div class="headers">
+                                    Step4
+                                </div>
+                                <div class="drop" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="subcards">
+                                <div class="drop" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+                                </div>
+                                <div class="headers">
+                                    Step5
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="subcards">
+                                <div class="drop" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+                                </div>
+                                <div class="headers">
+                                    Step6
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="subcards">
+                                <div class="drop" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+                                </div>
+                                <div class="headers">
+                                    Step7
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="subcards">
+                                <div class="drop" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+                                </div>
+                                <div class="headers">
+                                    Step8
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="navbar">
+                    <a href="#"><img src="public/images/play.png" id="actionButton" alt="play button" /></a>
+                    <img src="public/images/bottommid.png" id="leftPoint" style="display:none" alt="Leftside Pointing image" />
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="right-content">
+                    <div class="top-right-content">
+
+                    </div>
+                    <div class="bottom-right-content">
+                        <img src="public/images/lionDanceChat2.png" id="chat" alt="Lion Dance Chat image" />
+                        <img src="public/images/lionMascot.png" id="lion" alt="Lion Image" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

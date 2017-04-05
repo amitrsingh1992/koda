@@ -1,0 +1,22 @@
+{
+  "name": "koda",
+  "homepage": "https://github.com/amitrsingh1992/koda",
+  "authors": [
+    "singh.amit.10ee1074@gmail.com"
+  ],
+  "description": "Blockly Based Program",
+  "main": "index.html",
+  "keywords": [
+    "Blockly",
+    "Games"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

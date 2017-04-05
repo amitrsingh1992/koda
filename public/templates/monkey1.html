@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>page1</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style media="screen">
+      .right-content{
+        height:120px;
+        border-radius: 5px;
+        border:1px solid #cccccc;
+        background-color: #cccccc;
+      }
+      .left-content{
+        height:120px;
+        border-radius: 5px;
+        border:1px solid #cccccc;
+        background-color: #cccccc;
+      }
+      .mid-content{
+        height:120px;
+        width:auto;
+        border-radius: 5px;
+        border:1px solid #ccff33;
+        background-color: #ccff33;
+      }
+      .row{
+        margin-top:10px;
+      }
+      .block-content{
+        height:800px;
+        width:100%;
+        border:1px solid grey;
+        background-color: red;
+      }
+      .workspace-content{
+        width: 100%;
+        height: 800px;
+        border:1px solid grey;
+        background-color: red;
+        overflow:auto;
+      }
+      .actual-content{
+        width:100%;
+        height:700px;
+        border:1px solid grey;
+        background-color: red;
+      }
+      .scroll1,.scroll2{
+        width:100%;
+        height: 80px;
+        background-color: green;
+        margin-top: 20px;
+        overflow: scroll;
+      }
+      .navbar{
+        margin-left: 150px;
+        margin-top: 20px;
+      }
+      #nav{
+        margin-right: 20px;
+      }
+      .progress{
+        margin-top: 2px;
+      }
+      .progress-bar{
+        border: 1px solid white;
+        background-color: lightgreen;
+      }
+      #topbar1,#topbar2,#topbar3{
+        height:75px;
+        width:75px;
+        border-radius: 5px;
+        margin-left: 40px;
+        margin-right:20px;
+      }
+      #actionButton{
+        background-color: black;
+        text-align:center;
+        height:80px;
+        width:150px;
+        border-radius: 5px;
+        box-shadow: 5px 5px 2px black;
+        color: white;
+        border-color: black;
+        margin-right: 20px;
+        margin-left: 40px;
+        font-size: 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+          <div class="left-content">
+
+          </div>
+        </div>
+        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+          <div class="mid-content">
+
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+          <div class="right-content">
+            <div class="progress">
+              <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
+                <span class="sr-only">70% Complete</span>
+              </div>
+            </div>
+            <div class="tabs">
+              <a href="#">
+                <img src="../images/learn.png" id="topbar1" alt="learn logo"/>
+              </a>
+              <a href="#">
+                <img src="../images/home.png" id="topbar2" alt="home logo"/>
+              </a>
+              <a href="#">
+                <img src="../images/preview.png" id="topbar3" alt="preview logo"/>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+        <div class="row">
+          <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 ">
+            <div class="block-content">
+
+            </div>
+          </div>
+
+          <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
+
+              <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7">
+                <div class="actual-content">
+
+                </div>
+                <div class="navbar">
+                  <input type="button" id="actionButton" value="BACK" />
+                  <input type="button" id="actionButton" value="NEXT">
+                </div>
+              </div>
+              <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
+                <div class="workspace-content">
+
+                </div>
+              </div>
+          </div>
+        </div>
+    </div>
+  </body>
+</html>

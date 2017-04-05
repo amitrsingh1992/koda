@@ -1,0 +1,139 @@
+body {
+    background: url('../images/cave2.png') no-repeat center center fixed;
+    background-size: cover;
+    overflow:hidden;
+}
+
+.top-left-content {
+    width: 120px;
+    height: 120px;
+    background-color: #cccccc;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+}
+
+.bottom-left-content {
+    width: 100%;
+    height: 800px;
+    margin-top: 10px;
+}
+
+.row {
+    margin-top: 10px;
+}
+
+.top-mid-content {
+    width: 100%;
+    height: 80px;
+}
+
+.bottom-mid-content {
+    width: 100%;
+    height: 720px;
+    margin-top: 10xpx;
+    /*border: 1px solid grey;
+    background-color: grey;
+    border-radius: 5px;*/
+}
+
+.top-right-content {
+    width: 100%;
+    height: 120px;
+}
+
+.bottom-right-content {
+    width: 100%;
+    height: 700px;
+    margin-top: 10px;
+}
+
+#actionButton {
+    margin-left: 30%;
+    border-color: black;
+}
+
+.navbar {
+    float: center;
+    /*margin-top: 20px;*/
+    margin-left: 30%;
+}
+
+.bottom-left-content>img {
+    margin: 10px;
+}
+
+#lion {
+    height: 400px;
+    width: 400px;
+    margin-left: 10px;
+}
+
+#chat {
+    margin-left: 10px;
+}
+
+#leftPoint {
+    float: right;
+    display: none;
+}
+#pointing{
+  display: none;
+}
+#rightpoint{
+  width:320px;;
+  height:auto;
+  float:left;
+  margin-top: 5%;
+}
+
+.subcards{
+  width:195px;
+  height:194px;
+  border: 1px solid black;
+  margin:5px;
+}
+
+.headers{
+  width: 195px;
+  height:30px
+  border:2px solid grey;
+  background-color: grey;
+  text-align: center;
+  box-shadow: 1px 1px grey;
+}
+
+#sample {
+    height: 150px;
+    width: 200px;
+    background: url("../images/rock.jpg") no-repeat;
+    background-size: cover;
+    margin-left: 10%;
+}
+.dragSection{
+  width: 100%;
+  height:auto;
+  margin-top: 20%;
+}
+.drags{
+  margin-top:10%;
+}
+.gifSample{
+  margin-top: 5%;
+  width:100%;
+  height:auto;
+}
+
+#textStep1,#textStep{
+  margin-left: 33%;
+  background-color: #cccccc;
+}
+.imgback{
+  height:180px;
+  width:210px;
+  /*border:1px solid blue;*/
+}
+.drop{
+  width:195px;
+  height: 175px;
+  background-color: white;
+}

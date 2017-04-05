@@ -1,0 +1,50 @@
+.login{
+  width:455px;
+  height:346px;
+  position: absolute;
+  align:center;
+  border:1px solid #4dc3ff;
+  margin-left:33%;
+  margin-top:15%;
+}
+input{
+  width:300px;
+  height: 20px;
+  margin-bottom: 40px;
+  border: 1px solid black;
+}
+span{
+  margin-left: 50px;
+}
+form{
+  margin-top: 50px;
+}
+#headName{
+  font-family: helvetica,sans-serif;
+  font-size: 15px;
+}
+#subButton,#subButton1{
+  width:140px;
+  height:40px;
+  border-radius: 8px;
+  color:white;
+  background-color: #0088cc;
+  justify-content: center;
+  margin-left: 1.5%;
+  margin-bottom: 2%;
+  border: none;
+}
+#subButton:hover{
+  border-radius: 12px;
+  border: none;
+}
+#subButton1:hover{
+  border-radius: 12px;
+  border: none;
+}
+#recovery{
+  text-decoration: none;
+  color:#4dc3ff;
+  margin-top: -40px;
+  margin-left: 20%;
+}

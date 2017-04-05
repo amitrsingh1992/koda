@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>3rd layout</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style media="screen">
+      .top-left-content{
+        width:120px;
+        height:120px;
+        background-color:#cccccc;
+        border:1px solid #cccccc;
+        border-radius: 5px;
+      }
+      .bottom-left-content{
+        width:100%;
+        height:700px;
+        background-color:#cccccc;
+        border:1px solid #cccccc;
+        border-radius: 5px;
+        margin-top: 10px;
+      }
+      .row{
+        margin-top:10px;
+      }
+
+      .mid-content{
+        width:100%;
+        height:810px;;
+        background-color:#cccccc;
+        border:1px solid #cccccc;
+        border-radius: 5px;
+      }
+      .top-right-content{
+        width:100%;
+        height:120px;
+        background-color:#cccccc;
+        border:1px solid #cccccc;
+        border-radius: 5px;
+      }
+      .bottom-right-content{
+        width:100%;
+        height:700px;
+        background-color:#cccccc;
+        border:1px solid #cccccc;
+        border-radius: 5px;
+        margin-top: 10px;
+      }
+      #topbar1,#topbar2,#topbar3{
+        height:75px;
+        width:75px;
+        border-radius: 5px;
+        margin-left: 40px;
+        margin-right:20px;
+      }
+      .progress{
+        margin-top: 2px;
+      }
+      .progress-bar{
+        border: 1px solid white;
+        background-color: lightgreen;
+      }
+      #actionButton1,#actionButton3{
+        background-color: black;
+        text-align:center;
+        height:80px;
+        width:150px;
+        border-radius: 5px;
+        box-shadow: 5px 5px 2px black;
+        color: white;
+        border-color: black;
+        margin-right: 20px;
+        margin-left: 40px;
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+      #actionButton2{
+        margin-left: 25px;
+      }
+      .navbar{
+        float:center;
+        margin-top: 20px;
+        margin-left:30%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-3">
+          <div class="left-content">
+            <div class="top-left-content">
+
+            </div>
+            <div class="bottom-left-content">
+
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="mid-content">
+
+          </div>
+          <div class="navbar">
+            <input type="button" id="actionButton1" value="BACK" />
+            <!-- <a href="#"><img src="../images/play.png" id="actionButton2"alt="play button"></a> -->
+            <input type="button" id="actionButton3" value="NEXT">
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="right-content">
+            <div class="top-right-content">
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
+                  <span class="sr-only">70% Complete</span>
+                </div>
+              </div>
+              <div class="tabs">
+                <a href="#">
+                  <img src="../images/learn.png" id="topbar1" alt="learn logo"/>
+                </a>
+                <a href="#">
+                  <img src="../images/home.png" id="topbar2" alt="home logo"/>
+                </a>
+                <a href="#">
+                  <img src="../images/preview.png" id="topbar3" alt="preview logo"/>
+                </a>
+              </div
+            </div>
+            <div class="bottom-right-content">
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

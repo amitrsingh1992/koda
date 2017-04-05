@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sign Up Page</title>
+    <style media="screen">
+      span{
+          font-size: 15px;
+          font-family: helvetica,sans-serif;
+      }
+      input{
+        color:grey;
+      }
+      .signPage{
+        width:575px;
+        height:585px;
+        border:1px solid #4dc3ff;
+        margin-left: 30%;
+      }
+      #formName{
+        margin:5%;
+      }
+      h2{
+        margin-bottom:5px;
+        margin-left: 80px;
+        font-family: helvetica,sans-serif;
+      }
+      #username,#Upass,#Ppass,#datepicker{
+        width:220px;
+      }
+      #Pemail,#Uemail,#location{
+        width:300px;
+      }
+      #subButton{
+        width:240px;
+        height:30px;
+        border-radius: 5px;
+        color:white;
+        background-color: #0088cc;
+        justify-content: center;
+        margin-left: 25%;
+        margin-top: 3%;
+        border: none;
+      }
+      #subButton:hover{
+        border-radius: 10px;
+        border: none;
+      }
+    </style>
+    <!-- <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"> -->
+    <!-- <link rel="stylesheet" href="/resources/demos/style.css"> -->
+    <!-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script> -->
+    <!-- <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> -->
+    <script>
+        $( function() {
+          $( "#datepicker" ).datepicker();
+        } );
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="signup">
+        <h2 style="text-align:center;">Create your Koda Account</h2>
+        <div class="signPage">
+          <form id="formName">
+            <p>
+              <span>Name</span><br>
+              <span>
+                <input type="text" placeholder="First Name"/>
+                <input type="text" placeholder="Last Name"/>
+              </span><br>
+            </p>
+            <p>
+              <span>Choose your username</span><br>
+              <span><input type="text" id="username"/></span><br>
+              <span>
+            </p>
+            <p>
+              <span>Create a password for the parent</span>
+              <span style="margin-left:45px;">Retype parent's password</span>
+            </span><br>
+            <span>
+              <span><input type="password" id="Ppass"/></span>
+              <span style="margin-left:40px;"><input type="password" id="Ppass"/></span>
+            </span><br>
+            </p>
+            <p>
+              <span>
+                <span>Create a password for the user</span>
+                <span style="margin-left:55px;">Retype user's password</span>
+              </span><br>
+              <span>
+                <span><input type="password" id="Upass"/></span>
+                <span style="margin-left:40px;"><input type="password" id="Upass"/></span>
+              </span><br>
+            </p>
+            <p>
+              <span>
+                Birthday
+              </span><br>
+              <span>
+                <input type="text" id="datepicker" placeholder="dd/mm/yyyy"/>
+              </span><br>
+            </p>
+            <p>
+              <span>
+                Gender
+              </span><br>
+              <span>
+                <select name="gender" required>
+                  <option value=""> Select </option>
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
+                  <option value="Transgender">Transgender</option>
+                </select>
+              </span><br>
+            </p>
+            <p>
+              <span>
+                parent's email address
+              </span><br>
+              <span>
+                <input type="text" id="Pemail" />
+              </span><br>
+            </p>
+            <p>
+              <span>
+                user's email address(optional)
+              </span><br>
+              <span>
+                <input type="text" id="Uemail"/>
+              </span><br>
+            </p>
+            <p>
+              <span>
+                Location
+              </span><br>
+              <span>
+                <input type="text" placeholder="City and State" id="location" />
+                <input type="text" style="margin-left:5px;" placeholder="Country" />
+              </span><br>
+            </p>
+            <span>
+              <input type="button" id="subButton" value="Purchase Your Account">
+            </span>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

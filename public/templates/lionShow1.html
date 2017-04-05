@@ -1,0 +1,131 @@
+<!-- <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style media="screen">
+      body{
+        background-image: url(../images/cave.png) ;
+        background-position: relative;
+        background-repeat: no-repeat;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+      }
+      #sampleDance{
+        margin-top: 10%;
+        margin-left: 35%;
+        height:350px;
+        width:350px;
+        align-items: center;
+      }
+      #icons{
+        display: block-inline;
+        float :right;
+        /*margin-left:60%;*/
+        /*margin-top: 80%;*/
+      }
+      #nav{
+        margin-right: 20px;
+        border-radius: 5px;
+        margin-top: 120%;
+      }
+      #sampleDancetext{
+          margin-left: 300px;
+          margin-bottom: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid" id="bg">
+      <div class="lionGif">
+        <img src="../images/sampleDance.gif" id="sampleDance" alt="Lion Dance Tragedy" />
+        <img src="../images/chat5.png" id="sampleDancetext" alt=" sampleDance text">
+      </div>
+      <div class="navButton">
+        <footer id="icons">
+          <div class="row">
+            <a href="#">
+              <img src="../images/previous.png" id="nav"  alt="Previous Button" />
+            </a>
+            <a href="#">
+              <img src="../images/home.png" id="nav"  alt="Home Button" />
+            </a>
+            <a href="#">
+              <img src="../images/next.png" id="nav"  alt="Next Button" />
+            </a>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html> -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <style media="screen">
+    body{
+      background: url(../images/cave.png) no-repeat fixed center center;
+      background-size: cover;
+      box-sizing: border-box;
+      overflow: hidden;
+    }
+    .sampleDance{
+      transform: translateX(600px);
+      margin-top: 10%;
+      position: relative;
+    }
+    #sampleDance{
+        width:450px;
+        height:450px;
+        position: relative;
+    }
+    .navButton{
+      /*margin-top: 11%;*/
+      transform: translate3d(380px,230px,0px);
+    }
+    #helpLion{
+      transform: translate3d(800px,230px,0px);
+      height:60px;
+      width:200px;
+      font-size: 20px;
+    }
+    </style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="container-fluid" id="bg">
+      <div class="row">
+        <div class="sampleDance col-lg-8 col-md-8 col-sm-8 col-xs-8">
+          <img src="../images/sampleDance.gif" id="sampleDance" alt="Lion Dance Tragedy" />
+        </div>
+        <div class="tragedy col-lg-4 col-md-4 col-sm-4 col-xs-4">
+          <img src="../images/chat5.png" id="tragedytext" alt=" Tragedy text">
+        </div>
+      </div>
+      <div class="row">
+        <div class="help col-lg-8 col-md-8 col-sm-8 col-xs-8">
+          <!-- <input type="button"  value="Help the Lion" id="helpLion" /> -->
+        </div>
+        <div class="navButton col-lg-4 col-md-4 col-sm-4 col-xs-4">
+          <a href="#">
+            <img src="../images/previous.png" id="nav"  alt="Previous Button" />
+          </a>
+          <a href="#">
+            <img src="../images/home.png" id="nav"  alt="Home Button" />
+          </a>
+          <a href="#">
+            <img src="../images/next.png" id="nav"  alt="Next Button" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
