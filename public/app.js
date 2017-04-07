@@ -16,6 +16,16 @@ app.config(function ($stateProvider,$urlRouter) {
     url:'/login',
     templateUrl:'templates/login.html',
     controller:'loginCtrl'
+  })
+  .state('junglepage',{
+    url:'/junglepage',
+    templateUrl:'templates/junglepage.html',
+    controller:'junglepageCtrl'
+  })
+  .state('lionIntro',{
+    url:'/lionIntro',
+    templateUrl:'templates/lionIntro.html',
+    controller:'lionIntroCtrl'
   });
   $urlRouterProvider.otherwise('login');
 });

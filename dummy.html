@@ -1,152 +1,321 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html ng-app="myApp">
+
+<head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Sign Up Page</title>
+    <title>3rd layout</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="../components/angular/angular.min.js"></script>
+
+    <!-- <link rel="stylesheet" href="../css/lionDance2.css"> -->
     <style media="screen">
-      span{
-          font-size: 15px;
-          font-family: helvetica,sans-serif;
-      }
-      input{
-        color:grey;
-      }
-      .signPage{
-        width:575px;
-        height:585px;
-        border:1px solid #4dc3ff;
-        margin-left: 30%;
-      }
-      #formName{
-        margin:5%;
-      }
-      h2{
-        margin-bottom:5px;
-        margin-left: 80px;
-        font-family: helvetica,sans-serif;
-      }
-      #username,#Upass,#Ppass,#datepicker{
-        width:220px;
-      }
-      #Pemail,#Uemail,#location{
-        width:300px;
-      }
-      #subButton{
-        width:240px;
-        height:30px;
-        border-radius: 5px;
-        color:white;
-        background-color: #0088cc;
-        justify-content: center;
-        margin-left: 25%;
-        margin-top: 3%;
-        border: none;
-      }
-      #subButton:hover{
-        border-radius: 10px;
-        border: none;
-      }
+    body {
+    background: url('../image/cave2.png') no-repeat center center fixed;
+    background-size: cover;
+    overflow:hidden;
+  }
+
+.top-left-content {
+  width: 120px;
+  height: 120px;
+  background-color: #cccccc;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+}
+
+.bottom-left-content {
+  width: 100%;
+  height: 800px;
+  margin-top: 10px;
+}
+
+.row {
+  margin-top: 10px;
+}
+
+.top-mid-content {
+  width: 100%;
+  height: 80px;
+}
+
+.bottom-mid-content {
+  width: 100%;
+  height: 720px;
+  margin-top: 10xpx;
+  /*border: 1px solid grey;
+  background-color: grey;
+  border-radius: 5px;*/
+}
+
+.top-right-content {
+  width: 100%;
+  height: 120px;
+}
+
+.bottom-right-content {
+  width: 100%;
+  height: 700px;
+  margin-top: 10px;
+}
+
+#actionButton {
+  margin-left: 30%;
+  border-color: black;
+}
+
+.navbar {
+  float: center;
+  /*margin-top: 20px;*/
+  margin-left: 30%;
+}
+
+.bottom-left-content>img {
+  margin: 10px;
+}
+
+#lion {
+  height: 400px;
+  width: 400px;
+  margin-left: 10px;
+}
+
+#chat {
+  margin-left: 10px;
+}
+
+#leftPoint {
+  float: right;
+  display: none;
+}
+#pointing{
+display: none;
+}
+#rightpoint{
+width:320px;;
+height:auto;
+float:left;
+margin-top: 5%;
+}
+
+.subcards{
+width:195px;
+height:194px;
+border: 1px solid black;
+margin:5px;
+}
+
+.headers{
+width: 195px;
+height:30px
+border:2px solid grey;
+background-color: grey;
+text-align: center;
+box-shadow: 1px 1px grey;
+}
+
+#sample {
+  height: 150px;
+  width: 200px;
+  background: url("../image/rock.jpg") no-repeat;
+  background-size: cover;
+  margin-left: 10%;
+}
+.dragSection{
+width: 100%;
+height:auto;
+margin-top: 20%;
+}
+.drags{
+margin-top:10%;
+}
+.gifSample{
+margin-top: 5%;
+width:100%;
+height:auto;
+}
+
+#textStep1,#textStep{
+margin-left: 33%;
+background-color: #cccccc;
+}
+.imgback{
+height:180px;
+width:210px;
+/*border:1px solid blue;*/
+}
+.drop{
+width:195px;
+height: 175px;
+background-color: white;
+}
     </style>
-    <!-- <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"> -->
-    <!-- <link rel="stylesheet" href="/resources/demos/style.css"> -->
-    <!-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script> -->
-    <!-- <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> -->
-    <script>
-        $( function() {
-          $( "#datepicker" ).datepicker();
-        } );
+
+    <script type="text/javascript">
+    var App = angular.module('myApp', [] );
+    App.controller('myController',function ($scope) {
+
+      $scope.images=[{'thumb': 'dance1.png', 'drag': true},{'thumb': 'dance2.png', 'drag': true},{'thumb': 'dance3.png', 'drag': true},{'thumb': 'dance4.png', 'drag': true},
+                         {'thumb': 'dance5.png', 'drag': true},{'thumb': 'dance6.png', 'drag': true},{'thumb': 'dance7.png', 'drag': true},{'thumb': 'dance8.png', 'drag': true}]
+      });
+      $(document).ready(function () {
+        setTimeout(function () {
+          $("#pointing").show(1000);
+        },2000);
+        setTimeout(function () {
+          $("#leftPoint").show(1000);
+        },4000);
+      });
+
+        function allowDrop(ev) {
+          !ev.preventDefault();
+        }
+
+        function drag(ev) {
+          ev.dataTransfer.setData("text", ev.target.id);
+        }
+
+        function drop(ev) {
+          ev.preventDefault();
+          var data = ev.dataTransfer.getData("text");
+          ev.target.appendChild(document.getElementById(data));
+        }
     </script>
-  </head>
-  <body>
-    <div class="container">
-      <div class="signup">
-        <h2 style="text-align:center;">Create your Koda Account</h2>
-        <div class="signPage">
-          <form id="formName">
-            <p>
-              <span>Name</span><br>
-              <span>
-                <input type="text" placeholder="First Name"/>
-                <input type="text" placeholder="Last Name"/>
-              </span><br>
-            </p>
-            <p>
-              <span>Choose your username</span><br>
-              <span><input type="text" id="username"/></span><br>
-              <span>
-            </p>
-            <p>
-              <span>Create a password for the parent</span>
-              <span style="margin-left:45px;">Retype parent's password</span>
-            </span><br>
-            <span>
-              <span><input type="password" id="Ppass"/></span>
-              <span style="margin-left:40px;"><input type="password" id="Ppass"/></span>
-            </span><br>
-            </p>
-            <p>
-              <span>
-                <span>Create a password for the user</span>
-                <span style="margin-left:55px;">Retype user's password</span>
-              </span><br>
-              <span>
-                <span><input type="password" id="Upass"/></span>
-                <span style="margin-left:40px;"><input type="password" id="Upass"/></span>
-              </span><br>
-            </p>
-            <p>
-              <span>
-                Birthday
-              </span><br>
-              <span>
-                <input type="text" id="datepicker" placeholder="dd/mm/yyyy"/>
-              </span><br>
-            </p>
-            <p>
-              <span>
-                Gender
-              </span><br>
-              <span>
-                <select name="gender" required>
-                  <option value=""> Select </option>
-                  <option value="Male">Male</option>
-                  <option value="Female">Female</option>
-                  <option value="Transgender">Transgender</option>
-                </select>
-              </span><br>
-            </p>
-            <p>
-              <span>
-                parent's email address
-              </span><br>
-              <span>
-                <input type="text" id="Pemail" />
-              </span><br>
-            </p>
-            <p>
-              <span>
-                user's email address(optional)
-              </span><br>
-              <span>
-                <input type="text" id="Uemail"/>
-              </span><br>
-            </p>
-            <p>
-              <span>
-                Location
-              </span><br>
-              <span>
-                <input type="text" placeholder="City and State" id="location" />
-                <input type="text" style="margin-left:5px;" placeholder="Country" />
-              </span><br>
-            </p>
-            <span>
-              <input type="button" id="subButton" value="Purchase Your Account">
-            </span>
-          </form>
+</head>
+
+<body ng-controller="myController">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="left-content">
+                    <div class="top-left-content">
+
+                    </div>
+                    <div class="bottom-left-content">
+                        <div class="dragSection" ng-repeat="image in images">
+                            <div class="col-lg-6">
+                                <div class="imgback">
+                                    <img ng-src="assets/img/{{image.thumb}}" class = "dragStuff" id="{{image.thumb}}" alt="{{image.thumb}}" draggable="true" ondragstart="drag(event)" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="top-mid-content">
+
+                </div>
+                <div class="bottom-mid-content">
+
+                  <div class="gifSample">
+                      <div id="rightpoint">
+                        <img src="../image/midsign.png" style="display:none;" id="pointing" alt="Rightside Pointing image" />
+                      </div>
+                      <img src="../image/sampleDance.gif" id="sample" alt="Dance Preview" />
+                  </div>
+                    <div class="dropSection">
+                        <div class="col-lg-3">
+                            <div class="subcards">
+                                <div class="headers">
+                                    Step1
+                                </div>
+                                <div class="drop" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="subcards">
+                                <div class="headers">
+                                    Step2
+                                </div>
+                                <div class="drop" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="subcards">
+                                <div class="headers">
+                                    Step3
+                                </div>
+                                <div class="drop" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="subcards">
+                                <div class="headers">
+                                    Step4
+                                </div>
+                                <div class="drop" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="subcards">
+                                <div class="drop" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+                                </div>
+                                <div class="headers">
+                                    Step5
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="subcards">
+                                <div class="drop" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+                                </div>
+                                <div class="headers">
+                                    Step6
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="subcards">
+                                <div class="drop" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+                                </div>
+                                <div class="headers">
+                                    Step7
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="subcards">
+                                <div class="drop" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+                                </div>
+                                <div class="headers">
+                                    Step8
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="navbar">
+                    <a href="#"><img src="../image/play.png" id="actionButton" alt="play button" /></a>
+                    <img src="../image/bottommid.png" id="leftPoint" alt="Leftside Pointing image" />
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="right-content">
+                    <div class="top-right-content">
+
+                    </div>
+                    <div class="bottom-right-content">
+                        <img src="../image/lionDanceChat2.png" id="chat" alt="Lion Dance Chat image" />
+                        <img src="../image/lionMascot.png" id="lion" alt="Lion Image" />
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </body>
+</body>
+
 </html>
