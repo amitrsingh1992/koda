@@ -1,4 +1,4 @@
-body{
+.container-fluid{
   background: url('../images/junglePage.jpg') no-repeat center center fixed;
   background-size: cover;
 }
@@ -60,7 +60,6 @@ body{
   height:60px;
   width:120px;
   border-radius: 5px;
-  box-shadow: 5px 5px 2px grey;
   color: white;
   border-color: black;
   margin-right: 20px;

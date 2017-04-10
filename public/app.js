@@ -1,12 +1,13 @@
 var app = angular.module("myApp",["ui.router"]);
 
-app.config(function ($stateProvider,$urlRouter) {
+app.config(function ($urlRouterProvider,$stateProvider) {
+  $urlRouterProvider.otherwise('signUp');
   $stateProvider
-  .state('dashboard',{
-    url:'/dashboard',
-    templateUrl:'templates/dashboard.html',
-    controller:'dashboardCtrl'
-  })
+  // .state('dashboard',{
+  //   url:'/dashboard',
+  //   templateUrl:'templates/dashboard.html',
+  //   // controller:'dashboardCtrl'
+  // })
   .state('signUp',{
     url:'/signUp',
     templateUrl:'templates/signUp.html',
@@ -22,10 +23,19 @@ app.config(function ($stateProvider,$urlRouter) {
     templateUrl:'templates/junglepage.html',
     controller:'junglepageCtrl'
   })
+  .state('junglepage1',{
+    url:'/junglepage1',
+    templateUrl:'templates/junglepage1.html',
+    controller:'junglepageCtrl1'
+  })
   .state('lionIntro',{
     url:'/lionIntro',
     templateUrl:'templates/lionIntro.html',
     controller:'lionIntroCtrl'
+  })
+  .state('lionIntro1',{
+    url:'/lionIntro1',
+    templateUrl:'templates/lionIntro1.html',
+    controller:'lionIntroCtrl1'
   });
-  $urlRouterProvider.otherwise('login');
 });
