@@ -1,39 +1,14 @@
-<!-- <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>3rd layout</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="../css/lionIntro.css">
-  </head>
-  <body> -->
-    <div class="container-fluid" id="intro">
-      <div class="row">
-        <div class="col-lg-1">
-          <div class="left-content">
-            <div class="top-left-content">
 
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-9">
-          <div class="mid-content">
-            <img src="../images/homepage4.png" id="chat" alt="chat image" />
-            <img src="../images/lionMascot.png" id="lion" alt="lion Image" />
-          </div>
-          <div class="navbar">
-            <input type="button" id="actionButton3" ng-click="previous()" value="PREVIOUS" />
-            <input type="button" id="actionButton1"  ng-click="next()" value="NEXT" />
-          </div>
-        </div>
-        <div class="col-lg-2">
-          <div class="right-content">
-
-          </div>
-        </div>
-      </div>
-    </div>
-  <!-- </body>
-</html> -->
+<kodabar></kodabar>
+<div class="container-fluid" id="lionIntro">
+  <div class="row">
+    <img ng-src="images/homepage4.png" id="lion-cave" alt="home page chat box" />
+  </div>
+  <div class="row">
+    <img ng-src="images/lionMascot.png" id="Mascot" alt="Lion Image" />
+  </div>
+  <div class="row">
+    <input type="button" ng-click="previous()"id="lion-intro-previous" value="PREVIOUS" />
+    <input type="button" ng-click="next()" id="lion-intro-next" value="NEXT" />
+  </div>
+</div>

@@ -1,0 +1,40 @@
+.kodabar{
+  width:100%;
+  height:70px;
+  background-color: black;
+  margin-left: 2px;
+}
+.left-content-kodabar{
+  float:left;
+  display: inline-block;
+  margin-left: 5px;
+}
+.right-content-kodabar{
+  float:right;
+  display: inline-block;
+  margin-right: 5px;
+}
+#titleText{
+  font-size: 48px;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  color: white;
+  justify-content: center;
+  margin-left: 0px;
+}
+#candidateName{
+  font-size: 24px;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  color: white;
+}
+#user{
+  width:60px;
+  height:70px;
+  margin-right: 10px;
+  margin-bottom: 20px;
+}
+#droplist{
+  margin-bottom: 5px;
+}
+i{
+  color:white;
+}

@@ -1,7 +1,7 @@
 var app = angular.module("myApp",["ui.router"]);
 
 app.config(function ($urlRouterProvider,$stateProvider) {
-  $urlRouterProvider.otherwise('signUp');
+  $urlRouterProvider.otherwise('junglepage');
   $stateProvider
   // .state('dashboard',{
   //   url:'/dashboard',
