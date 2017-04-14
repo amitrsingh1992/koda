@@ -1,5 +1,5 @@
 var express = require('express');
-var koda = require('../model/kodaSchema').koda;
+var koda = require('../models/kodaSchema').koda;
 var morgan = require('morgan');
 var app = express();
 
@@ -11,12 +11,14 @@ function commonMethod() {
 
 
 commonMethod.prototype.save = function(kodaData, callback) {
-    // console.log("pinupData::",pinupData);
+    console.log("koda",kodaData);
     var kodaObj = new koda(kodaData);
     kodaObj.save(function(error, data) {
         if (error) {
+          console.log("entered error");
           callback(error, null);
         } else {
+          console.log("entered data");
           callback(null, data);
         }
     });
