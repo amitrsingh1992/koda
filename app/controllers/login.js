@@ -20,8 +20,17 @@ router.post('/', function(req, res) {
         };
         console.log(data);
     var loginDetail=com.save(data,function (err,detail) {
+      console.log("hello");
       if(err){
-        throw 401;
+        if(typeof err === "object"){
+                  var field = err.message.split('.$')[0];
+                  field = field.split('dup key')[0];
+                  field = field.substring(0, field.lastIndexOf('_')); // returns email
+                  res.status(401).send({
+                      "status": false,
+                      "message":"data already exists"
+                  });
+                }
       }
       else{
         res.json({

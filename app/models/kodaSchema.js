@@ -16,7 +16,7 @@ var kodaSchema = new BaseSchema({
       //   type:String,
       //   unique:true,
       //   lowercase:true,
-      //   required:true,
+      //   required:false,
       //   match: new RegExp(/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/),
       //   trim:true
       // },
@@ -24,30 +24,31 @@ var kodaSchema = new BaseSchema({
       //   type:String,
       //   unique:true,
       //   lowercase:true,
-      //   required:true,
+      //   required:false,
       //   match: new RegExp(/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/),
       //   trim:true
       // },
       // userPassword:{
       //   type:String,
-      //   required:true,
+      //   required:false,
       //   match: new RegExp(/^(?=.*[a-zA-Z])(?=.*\d)(?=.*[!@#$%^&*()_+])[A-Za-z\d][A-Za-z\d!@#$%^&*()_+]{7,19}$/),
       //   trim:true
       // },
       // ParentPassword:{
       //   type:String,
-      //   required:true,
+      //   required:false,
       //   match: new RegExp(/^(?=.*[a-zA-Z])(?=.*\d)(?=.*[!@#$%^&*()_+])[A-Za-z\d][A-Za-z\d!@#$%^&*()_+]{7,19}$/),
       //   trim:true
       // },
       firstname:{
        type:String,
-       unique:false,
+       unique:true,
        required:true,
        trim:true
      },
      lastname:{
        type:String,
+       unique:true,
        required:true,
        trim:true
      }
@@ -55,16 +56,16 @@ var kodaSchema = new BaseSchema({
     //   personalDetail:[{
     //    birthDate:{
     //      type:Number,
-    //      required:true,
+    //      required:false,
     //    },
     //    location:[{
     //      city:{
     //        type:String,
-    //        requried:true
+    //        requried:false
     //      },
     //      country:{
     //        type:String,
-    //        required:true,
+    //        required:false,
     //      }
     //  }]
     //   }],
@@ -77,51 +78,61 @@ var kodaSchema = new BaseSchema({
     //       fruitCatcher:[{
     //         hourSpend:{
     //           type:Number,
-    //           required:true
+    //           required:false,
+    //           default:0
     //         },
     //         status:{
     //           type:String,
-    //           required:true
+    //           required:false,
+    //           default:"Start"
     //         }
     //       }],
     //       flyCatcher:[{
     //         hourSpend:{
     //           type:Number,
-    //           required:true
+    //           required:false,
+    //           default:0
     //         },
     //         status:{
     //           type:String,
-    //           required:true
+    //           required:false,
+    //           default:"Start"
     //         }
     //       }],
     //       hangMan:[{
     //         hourSpend:{
     //           type:Number,
-    //           required:true
+    //           required:false,
+    //           default:0
     //         },
     //         status:{
     //           type:String,
-    //           required:true
+    //           required:false,
+    //           default:"Start"
     //         }
     //       }],
     //       turtleName:[{
     //         hourSpend:{
     //           type:Number,
-    //           required:true
+    //           required:false,
+    //           default:0
     //         },
     //         status:{
     //           type:String,
-    //           required:true
+    //           required:false,
+    //           default:"Start"
     //         }
     //       }],
     //       mindGame:[{
     //         hourSpend:{
     //           type:Number,
-    //           required:true
+    //           required:false,
+    //           default:0
     //         },
     //         status:{
     //           type:String,
-    //           required:true
+    //           required:false,
+    //           default:"Start"
     //         }
     //       }]
     //     }]

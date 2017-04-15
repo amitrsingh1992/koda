@@ -14,20 +14,21 @@ var AbstractSchema = function() {
     Schema.apply(this, arguments);
     this.add({
         createdAt: {
-            type: Date
-          //  default: Date.now
+            type: Date,
+           default: Date.now
         },
             updatedAt: {
             type: Date
             //  default : Date.now
-        },
-          deletedAt:{
-          type: Date
-        },
-        isDeleted: {
-          type: Boolean,
-          default:false
         }
+        // ,
+        //   deletedAt:{
+        //   type: Date
+        // },
+        // isDeleted: {
+        //   type: Boolean,
+        //   default:false
+        // }
     });
 };
 util.inherits(AbstractSchema, Schema);

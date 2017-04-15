@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+    body{
+      background: url('app/public/images/giraffeBack.png') no-repeat center center fixed;
+      background-size: cover;
+      overflow: hidden;
+    }
+    .right-content{
+      margin-left: 5%;
+      margin-top: 10%;
+    }
+    #giraffe{
+      height:450px;
+      width: 400px;
+    }
+    #gifChat{
+      height:250px;
+      width:350px;
+    }
+    .flash{
+      margin-top: 2%;
+      float:right;
+    }
+    .Action{
+      margin-top:55%;
+      margin-left: 55%;
+    }
+    #nextbutton{
+      width:150px;
+      height:80px;
+      background: green;
+      border: 2px solid rgba(255, 255, 255, 1);
+      text-align: center;
+      color: white;
+      border-radius: 10px;
+      margin-left: 50px;
+      font-size: 24px;
+      opacity: 0.2;
+      -webkit-animation-name: greenPulse;
+      -webkit-animation-duration: 1s;
+      -webkit-animation-iteration-count: infinite;
+      -webkit-animation-delay:10s;
+    }
+    @-webkit-keyframes greenPulse {
+      from { background-color: #749a02; -webkit-box-shadow: 0 0 9px #333;;opacity: 1;border: 2px solid rgba(255, 255, 255, 1) }
+      50% { background-color: #91bd09; -webkit-box-shadow: 0 0 18px #91bd09;;opacity: 1;border: 2px solid rgba(255, 255, 255, 1) }
+      to { background-color: #749a02; -webkit-box-shadow: 0 0 9px #333;opacity: 1;border: 2px solid rgba(255, 255, 255, 1)}
+    }
+    #backbutton{
+      width:150px;
+      height:80px;
+      background-color: black;
+      border: 2px solid white;
+      text-align: center;
+      color: white;
+      border-radius: 10px;
+      margin-left: 50px;
+      font-size: 24px;
+    }
+    </style>
+    <link rel="stylesheet" href="app/public/css/kodabar.css" />
+    <link rel="stylesheet" href="app/public/bower_components/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="app/public/bower_components/font-awesome/css/font-awesome.min.css" />
+    <script src="app/public/bower_components/jquery/dist/jquery.min.js" charset="utf-8"></script>
+    <script src="app/public/bower_components/bootstrap/dist/js/bootstrap.min.js" charset="utf-8"></script>
+    <script src="app/public/bower_components/angular/angular.min.js" charset="utf-8"></script>
+    <script src="app/public/bower_components/angular-ui-router/release/angular-ui-router.min.js" charset="utf-8"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+      $('#nextbutton').prop('disabled',true)
+      setTimeout(function () {
+        $('#nextbutton').prop('disabled',false)
+      },10000);
+    });
+    </script>
+  </head>
+  <body>
+    <div class="kodabar">
+      <div class="left-content-kodabar">
+        <i class="fa fa-bars fa-4x" aria-hidden="true"></i>
+        <span id="titleText">KODA</span>
+      </div>
+      <div class="right-content-kodabar">
+        <!-- <a href="#">
+              <span class="glyphicon glyphicon-triangle-bottom"></span>
+        </a> -->
+        <i class="fa fa-sort-desc fa-4x" aria-hidden="true"></i>
+        <span id="candidateName">Saina</span>
+        <img src="app/public/images/user.png"  id ="user" alt="User Image" />
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-9">
+        <div class="flash">
+          <object style="width:900px;height:700px;">
+            <param name="flash Game" value="app/public/images/skillGameWithAGiraffe.swf">
+            <embed  src="app/public/images/skillGameWithAGiraffe.swf" style="width:900px;height:700px;">
+          </object>
+        </div>
+        <div class="Action">
+          <input type="button" id="backbutton" value="BACK" />
+          <input type="button" id="nextbutton" value="NEXT" />
+        </div>
+      </div>
+      <div class="col-lg-3">
+        <div class="right-content">
+          <div class="chat">
+            <img src="app/public/images/gifGameChat.png" id="gifChat" alt="Game Chat pic" />
+          </div>
+          <div class="image">
+            <img src="app/public/images/giraffe.png" id= "giraffe" alt=" giraffe image" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -13,6 +13,7 @@ function commonMethod() {
 commonMethod.prototype.save = function(kodaData, callback) {
     console.log("koda",kodaData);
     var kodaObj = new koda(kodaData);
+    console.log("kodaObj",kodaObj);
     kodaObj.save(function(error, data) {
         if (error) {
           console.log("entered error");
