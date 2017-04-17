@@ -1,67 +1,115 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="utf-8">
     <title></title>
     <style media="screen">
-        body {
-            background-color: yellow;
-        }
-
+    body{
+      background-color: yellow !important;
+    }
         .badge {
-            width: 600px;
+            width: 800px;
             height: 400px;
             border-radius: 10px;
-            box-shadow: 0 10px 10px 0 black;
-            background-color: white;
+            box-shadow: 2px 2px 5px grey;
+            background-color:white !important;
             border: none;
+            margin-left: 60%;
         }
-
-        #continue {
-            width: 400px;
+        .sequenceSavvy{
+          float: right;
+          margin-top: 10%;
+          margin-right: 10%;
+        }
+        .animationNinja{
+          float:left;
+          margin-top: 10%;
+          margin-left: 10%;
+        }
+        .options{
+          margin-left: 700px;;
+          margin-top: 5px;
+          display: inline-flex;
+        }
+        #continuebutton {
+            width: 600px;
             height: 80px;
             background: green;
             border: 2px solid rgba(255, 255, 255, 1);
             text-align: center;
             color: white;
             border-radius: 10px;
-            margin-left: 50px;
             font-size: 24px;
-            opacity: 1;
+            opacity: 0.2;
+            margin-top: 6%;
+            margin-left: 72%;
             -webkit-animation-name: greenPulse;
             -webkit-animation-duration: 1s;
             -webkit-animation-iteration-count: infinite;
             -webkit-animation-delay: 10s;
         }
-
         @-webkit-keyframes greenPulse {
-            from {
-                background-color: #749a02;
-                -webkit-box-shadow: 0 0 9px #333;
-                ;
-                opacity: 1;
-                border: 2px solid rgba(255, 255, 255, 1)
-            }
-            50% {
-                background-color: #91bd09;
-                -webkit-box-shadow: 0 0 18px #91bd09;
-                ;
-                opacity: 1;
-                border: 2px solid rgba(255, 255, 255, 1)
-            }
-            to {
-                background-color: #749a02;
-                -webkit-box-shadow: 0 0 9px #333;
-                opacity: 1;
-                border: 2px solid rgba(255, 255, 255, 1)
-            }
+            from {background-color: #749a02;-webkit-box-shadow: 0 0 9px #333;opacity: 1;border: 2px solid rgba(255, 255, 255, 1);}
+            50% {background-color: #91bd09;-webkit-box-shadow: 0 0 18px #91bd09;opacity: 1;border: 2px solid rgba(255, 255, 255, 1);}
+            to {background-color: #749a02;-webkit-box-shadow: 0 0 9px #333;opacity: 1;border: 2px solid rgba(255, 255, 255, 1);}
         }
-
+        #actionText{
+          font-size: 18px;
+          font-weight: 600;
+          font-family: arial,helvetica,sans-serif;
+          margin-left: 20px;
+          margin-top: 10px;
+        }
         #milestone {
             width: 100%;
             height: 200px;
+            margin-top: -1.5%;
         }
+        .replaybutton,.roundhome{
+          display: inline-flex;
+          width:300px;
+        }
+        /**/
+        .popup1,.popup{
+          width:1200px;
+          height:500px;
+          border-radius: 10px;
+          margin-left: 33%;
+          margin-top: 10%;
+          opacity: 0;
+          display: none;
+        }
+        p{
+          color:violet;
+          text-align: center;
+          font-size: 20px;
+        }
+        .content{
+          margin-top: 2%;
+          margin-left: 10%;
+          width:880px;
+          height:435px;
+          border: 1px solid black;
+          border-radius:10px;
+          padding: 20px;
+        }
+        #cross{
+          margin-left: -38px;
+        }
+        #pop-lion{
+          height:300px;
+          width:250px;
+          margin-top: 20%;
+        }
+        #walk{
+          margin: 4% 15%;
+          width: 554px;
+          height:150px;
+        }
+        .inner-chat{
+          margin-top: 4%;
+        }
+        /**/
     </style>
     <link rel="stylesheet" href="app/public/css/kodabar.css" />
     <link rel="stylesheet" href="app/public/bower_components/bootstrap/dist/css/bootstrap.min.css" />
@@ -70,6 +118,14 @@
     <script src="app/public/bower_components/bootstrap/dist/js/bootstrap.min.js" charset="utf-8"></script>
     <script src="app/public/bower_components/angular/angular.min.js" charset="utf-8"></script>
     <script src="app/public/bower_components/angular-ui-router/release/angular-ui-router.min.js" charset="utf-8"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+         function show(){
+          console.log("entered");
+          $('#popup').dailog();
+        }
+      });
+    </script>
 </head>
 
 <body>
@@ -85,21 +141,91 @@
         </div>
     </div>
     <img src="app/public/images/milestonepic.png" id="milestone" alt="milestone banner image" />
-    <div class="row">
-
+    <div class="badgecontent">
       <div class="col-lg-6">
         <div class="badge">
-          <div class="">
-
+          <div class="animationNinja">
+            <img src="app/public/images/animationNinja.png" onclick="show()" id="animation" alt="animation ninja batch" />
+            <!--  -->
+            <div class="popup" id="popup">
+              <div class="row">
+                <div class="content col-lg-11">
+                  <p>
+                    Animation is nothing but making a sequence of images or pictures look live!
+                  </p>
+                  <p>
+                    Each successive image  in the sequence  differs from the previous  one in little ways.
+                    Perhaps in the positions of limbs of a character,locations of things, or the look of a
+                    character
+                  </p>
+                  <img src="app/public/images/walkinProgress.png" id="walk" alt=" popup walk image" />
+                  <p>
+                    when such a sequence  of images  is seen  in quick succession ,it looks like the
+                    character  is moving , the various things  in  the scene  are in  motion, or the appearance
+                    of the character is changing.
+                  </p>
+                </div>
+                <div class="cross col-lg-1">
+                  <img src="app/public/images/cross.png" id="cross"alt="cross image" />
+                </div>
+              </div>
+            </div>
+            <!--  -->
+          </div>
+          <div class="sequenceSavvy">
+            <a href="#popup1">
+            <img src="app/public/images/sequenceSavvy.png" id="sequence" alt="sequence savvy bactch" />
+            </a>
+            <!--  -->
+            <div class="popup1" id="#popup1">
+              <div class="row">
+                <div class="content col-lg-11">
+                  <div class="col-lg-8 inner-chat">
+                    <p>To learn the dance sequence,
+                      it was very important to identify the steps first.
+                    </p>
+                    <p>
+                      But even though I did identify the steps,I did not
+                      have the order inplace.
+                    </p>
+                    <p>
+                      You saw exactly what happened when I had the
+                     wrong order of steps.I looked like I was have a fit.
+                    </p>
+                    <p>
+                      It's very important to remember what you have learnt
+                      here.No not dance,but identifying the steps and
+                      their sequence.
+                    </p>
+                    <p>
+                      You will find you need it often in life.
+                    </p>
+                  </div>
+                  <div class="col-lg-4">
+                    <img src="app/public/images/lionMascot.png" id="pop-lion" alt="lion image">
+                  </div>
+                </div>
+                <div class="cross col-lg-1">
+                  <img src="app/public/images/cross.png" id="cross"alt="cross image" />
+                </div>
+              </div>
+            </div>
+            <!--  -->
           </div>
         </div>
         <div class="options">
-          <img src="app/public/images/replaybutton.png" alt="">
-          <h5>Replay this level</h5>
-          <img src="app/public/images/roundhome.png" alt="">
-          <h5>Go to my Dashboard</h5>
+          <div class="replaybutton">
+            <img src="app/public/images/replaybutton.png" alt="">
+            <span id="actionText">Replay this level</span>
+          </div>
+          <div class="roundhome">
+            <img src="app/public/images/roundhome.png" alt="">
+            <span id="actionText">Go to my Dashboard</span>
+          </div>
         </div>
-        <input type="button" value="CONTINUE ON THE JOURNEY!" />
+        <div class="continue">
+          <input type="button" id="continuebutton" value="CONTINUE ON THE JOURNEY!" />
+        </div>
       </div>
     </div>
 </body>

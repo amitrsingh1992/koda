@@ -1,315 +1,74 @@
 <!DOCTYPE html>
-<html ng-app="myApp">
-
+<html>
 <head>
     <meta charset="utf-8">
-    <title>3rd layout</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="../components/angular/angular.min.js"></script>
+    <title></title>
 
-    <!-- <link rel="stylesheet" href="../css/lionDance2.css"> -->
+    <link rel="stylesheet" href="app/public/css/kodabar.css" />
+    <link rel="stylesheet" href="app/public/bower_components/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="app/public/bower_components/font-awesome/css/font-awesome.min.css" />
+    <script src="app/public/bower_components/jquery/dist/jquery.min.js" charset="utf-8"></script>
+    <script src="app/public/bower_components/bootstrap/dist/js/bootstrap.min.js" charset="utf-8"></script>
+    <script src="app/public/bower_components/angular/angular.min.js" charset="utf-8"></script>
+    <script src="app/public/bower_components/angular-ui-router/release/angular-ui-router.min.js" charset="utf-8"></script>
     <style media="screen">
-    body {
-    background: url('../image/cave2.png') no-repeat center center fixed;
-    background-size: cover;
-    overflow:hidden;
-  }
-
-.top-left-content {
-  width: 120px;
-  height: 120px;
-  background-color: #cccccc;
-  border: 1px solid #cccccc;
-  border-radius: 5px;
-}
-
-.bottom-left-content {
-  width: 100%;
-  height: 800px;
-  margin-top: 10px;
-}
-
-.row {
-  margin-top: 10px;
-}
-
-.top-mid-content {
-  width: 100%;
-  height: 80px;
-}
-
-.bottom-mid-content {
-  width: 100%;
-  height: 720px;
-  margin-top: 10xpx;
-}
-
-.top-right-content {
-  width: 100%;
-  height: 120px;
-}
-
-.bottom-right-content {
-  width: 100%;
-  height: 700px;
-  margin-top: 10px;
-}
-
-#actionButton {
-  margin-left: 30%;
-  border-color: black;
-}
-
-.navbar {
-  float: center;
-  margin-left: 30%;
-}
-
-.bottom-left-content>img {
-  margin: 10px;
-}
-
-#lion {
-  height: 400px;
-  width: 400px;
-  margin-left: 10px;
-}
-
-#chat {
-  margin-left: 10px;
-}
-
-#leftPoint {
-  float: right;
-  display: none;
-}
-#pointing{
-display: none;
-}
-#rightpoint{
-width:320px;;
-height:auto;
-float:left;
-margin-top: 5%;
-}
-
-.subcards{
-width:195px;
-height:194px;
-border: 1px solid black;
-margin:5px;
-}
-
-.headers{
-width: 195px;
-height:30px
-border:2px solid grey;
-background-color: grey;
-text-align: center;
-box-shadow: 1px 1px grey;
-}
-
-#sample {
-  height: 150px;
-  width: 200px;
-  background: url("../image/rock.jpg") no-repeat;
-  background-size: cover;
-  margin-left: 10%;
-}
-.dragSection{
-width: 100%;
-height:auto;
-margin-top: 20%;
-}
-.drags{
-margin-top:10%;
-}
-.gifSample{
-margin-top: 5%;
-width:100%;
-height:auto;
-}
-
-#textStep1,#textStep{
-margin-left: 33%;
-background-color: #cccccc;
-}
-.imgback{
-height:180px;
-width:210px;
-}
-.drop{
-width:195px;
-height: 175px;
-background-color: white;
-}
+      .popup,.popup1{
+        width:1200px;
+        height:500px;
+        border-radius: 10px;
+        background-color: white;
+        /*border: 1px solid black;*/
+        margin-left: 33%;
+        margin-top: 10%;
+      }
+      p{
+        color:violet;
+        text-align: center;
+        font-size: 20px;
+      }
+      .content{
+        margin-top: 2%;
+        margin-left: 10%;
+        width:880px;
+        height:435px;
+        border: 1px solid black;
+        border-radius:10px;
+        padding: 20px;
+      }
+      #cross{
+        margin-left:-38px;
+      }
+      #walk{
+        margin: 4% 15%;
+        width: 554px;
+        height:150px;
+      }
     </style>
-
-    <script type="text/javascript">
-    var App = angular.module('myApp', [] );
-    App.controller('myController',function ($scope) {
-
-      $scope.images=[{'thumb': 'dance1.png', 'drag': true},{'thumb': 'dance2.png', 'drag': true},{'thumb': 'dance3.png', 'drag': true},{'thumb': 'dance4.png', 'drag': true},
-                         {'thumb': 'dance5.png', 'drag': true},{'thumb': 'dance6.png', 'drag': true},{'thumb': 'dance7.png', 'drag': true},{'thumb': 'dance8.png', 'drag': true}]
-      });
-      $(document).ready(function () {
-        setTimeout(function () {
-          $("#pointing").show(1000);
-        },2000);
-        setTimeout(function () {
-          $("#leftPoint").show(1000);
-        },4000);
-      });
-
-        function allowDrop(ev) {
-          !ev.preventDefault();
-        }
-
-        function drag(ev) {
-          ev.dataTransfer.setData("text", ev.target.id);
-        }
-
-        function drop(ev) {
-          ev.preventDefault();
-          var data = ev.dataTransfer.getData("text");
-          ev.target.appendChild(document.getElementById(data));
-        }
-    </script>
 </head>
 
-<body ng-controller="myController">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-lg-3">
-                <div class="left-content">
-                    <div class="top-left-content">
-
-                    </div>
-                    <div class="bottom-left-content">
-                        <div class="dragSection" ng-repeat="image in images">
-                            <div class="col-lg-6">
-                                <div class="imgback">
-                                    <img ng-src="assets/img/{{image.thumb}}" class = "dragStuff" id="{{image.thumb}}" alt="{{image.thumb}}" draggable="true" ondragstart="drag(event)" />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="top-mid-content">
-
-                </div>
-                <div class="bottom-mid-content">
-
-                  <div class="gifSample">
-                      <div id="rightpoint">
-                        <img src="../image/midsign.png" style="display:none;" id="pointing" alt="Rightside Pointing image" />
-                      </div>
-                      <img src="../image/sampleDance.gif" id="sample" alt="Dance Preview" />
-                  </div>
-                    <div class="dropSection">
-                        <div class="col-lg-3">
-                            <div class="subcards">
-                                <div class="headers">
-                                    Step1
-                                </div>
-                                <div class="drop" ondrop="drop(event)" ondragover="allowDrop(event)">
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3">
-                            <div class="subcards">
-                                <div class="headers">
-                                    Step2
-                                </div>
-                                <div class="drop" ondrop="drop(event)" ondragover="allowDrop(event)">
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3">
-                            <div class="subcards">
-                                <div class="headers">
-                                    Step3
-                                </div>
-                                <div class="drop" ondrop="drop(event)" ondragover="allowDrop(event)">
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3">
-                            <div class="subcards">
-                                <div class="headers">
-                                    Step4
-                                </div>
-                                <div class="drop" ondrop="drop(event)" ondragover="allowDrop(event)">
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3">
-                            <div class="subcards">
-                                <div class="drop" ondrop="drop(event)" ondragover="allowDrop(event)">
-
-                                </div>
-                                <div class="headers">
-                                    Step5
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3">
-                            <div class="subcards">
-                                <div class="drop" ondrop="drop(event)" ondragover="allowDrop(event)">
-
-                                </div>
-                                <div class="headers">
-                                    Step6
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3">
-                            <div class="subcards">
-                                <div class="drop" ondrop="drop(event)" ondragover="allowDrop(event)">
-
-                                </div>
-                                <div class="headers">
-                                    Step7
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3">
-                            <div class="subcards">
-                                <div class="drop" ondrop="drop(event)" ondragover="allowDrop(event)">
-
-                                </div>
-                                <div class="headers">
-                                    Step8
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="navbar">
-                    <a href="#"><img src="../image/play.png" id="actionButton" alt="play button" /></a>
-                    <img src="../image/bottommid.png" id="leftPoint" alt="Leftside Pointing image" />
-                </div>
-            </div>
-            <div class="col-lg-3">
-                <div class="right-content">
-                    <div class="top-right-content">
-
-                    </div>
-                    <div class="bottom-right-content">
-                        <img src="../image/lionDanceChat2.png" id="chat" alt="Lion Dance Chat image" />
-                        <img src="../image/lionMascot.png" id="lion" alt="Lion Image" />
-                    </div>
-                </div>
-            </div>
+<body>
+    <div class="popup">
+      <div class="row">
+        <div class="content col-lg-11">
+          <p>
+            Animation is nothing but making a sequence of images or pictures look live!
+          </p>
+          <p>
+            Each successive image  in the sequence  differs from the previous  one in little ways.
+            Perhaps in the positions of limbs of a character,locations of things, or the look of a
+            character
+          </p>
+          <img src="app/public/images/walkinProgress.png" id="walk" alt=" popup walk image" />
+          <p>
+            when such a sequence  of images  is seen  in quick succession ,it looks like the
+            character  is moving , the various things  in  the scene  are in  motion, or the appearance
+            of the character is changing.
+          </p>
         </div>
+        <div class="cross col-lg-1">
+          <img src="app/public/images/cross.png" id="cross"alt="cross image" />
+        </div>
+      </div>
     </div>
 </body>
 
